@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+/* Variáveis CSS para cores e fontes */
+        :root{
+            --white: #ffffff;
+            --blue-magenta: #fafafe;
+            --blue-dark: #05131c;
+            --marron: #a67546;
+            --red: #ff3131;
+            --green: #6dff4f;
+            --black: #000000;
+            --font-title: "EB Garamond", serif;
+            --font-f:"Lato", sans-serif;
+        }
+        /* Reset básico de CSS */
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--blue-magenta);
+    background-color: var(--blue-dark);
+    font-family: var(--font-title); /* Aplica a fonte padrão */
+}
+header{
+    background-color: var(--blue-dark);
+    padding: 2rem;
+    text-align: center;
+}
+header img{
+    width: 120px;
+}
+h1{
+    color: var(--marrom);
+
+ font-size: 2rem;
+      margin-top: 1rem;
+    }
+    section {
+      padding: 3rem 1rem;
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    section img {
+      max-width: 300px;
+      margin: 1rem 0;
+      border-radius: 10px;
+    }
+    .cta-button {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      background-color: var(--green);
+      color: var(--blue-dark);
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .kit-button {
+      background-color: var(--red);
+      color: var(--white);
+    }
+    footer {
+      background-color: var(--blue-dark);
+      padding: 2rem 1rem;
+      text-align: center;
+      font-size: 0.9rem;
+    }
