@@ -1,0 +1,197 @@
+:root{
+--white: #ffffff;
+--blue-magenta: #fafafe;
+--blue-dark: #05131c;
+--marron: #a67546;
+--red: #ff3131;
+--green: #6dff4f;
+--black: #000000;
+--font-title: "EB Garamond", serif;
+--font-f:"Lato", sans-serif;
+}
+
+# Atualizando o HTML com formulário de captura, cards para temas variados e o e-book em evidência no topo
+
+updated_html_content = """
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sintonia em Dia - Organize-se ou se afogue</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #fafafe;
+            color: #05131c;
+        }
+        header {
+            background-color: #05131c;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+        .logo {
+            height: 80px;
+            margin-bottom: 10px;
+        }
+        .hero {
+            background-color: #6dff4f;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .hero h2 {
+            font-size: 2em;
+            color: #05131c;
+        }
+        .hero img {
+            max-width: 300px;
+            height: auto;
+            margin-top: 20px;
+        }
+        section {
+            padding: 40px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .card {
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            width: 260px;
+            padding: 20px;
+            text-align: center;
+        }
+        .card h3 {
+            color: #a67546;
+        }
+        .product {
+            margin-bottom: 60px;
+            text-align: center;
+        }
+        .product img {
+            max-width: 300px;
+            height: auto;
+            margin: 20px auto;
+            display: block;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #6dff4f;
+            color: #05131c;
+            padding: 12px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .btn:hover {
+            background-color: #51cc3c;
+        }
+        .form-section {
+            background-color: #f4f4f4;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .form-section h2 {
+            color: #a67546;
+        }
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        input[type="text"], input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        input[type="submit"] {
+            background-color: #6dff4f;
+            color: #05131c;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #51cc3c;
+        }
+        footer {
+            background-color: #05131c;
+            color: white;
+            text-align: center;
+            padding: 20px 10px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="logo.jpeg" alt="Logo Sintonia em Dia" class="logo">
+    <h1>Sintonia em Dia</h1>
+    <p>Explore ideias, mergulhe em histórias, encontre sua organização</p>
+</header>
+
+<div class="hero">
+    <h2>Destaque: E-book - Organize sua rotina</h2>
+    <p>Domine sua rotina com estratégias práticas. Comece agora!</p>
+    <img src="Banner-Ebook.png" alt="E-book Como organizar sua rotina">
+    <br><br>
+    <a href="#" class="btn">Quero o E-book</a>
+</div>
+
+<section>
+    <h2 style="text-align:center;">Temas em destaque</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>Organização e Produtividade</h3>
+            <p>Melhore sua rotina e alcance suas metas diárias com clareza.</p>
+        </div>
+        <div class="card">
+            <h3>Ficção Científica</h3>
+            <p>Viagens interplanetárias, realidades alternativas e mais.</p>
+        </div>
+        <div class="card">
+            <h3>Estudos Bíblicos</h3>
+            <p>Reflexões e aprendizados a partir da Bíblia.</p>
+        </div>
+    </div>
+</section>
+
+<section class="form-section">
+    <h2>Receba Novidades e Lançamentos</h2>
+    <p>Cadastre-se para receber nossos próximos conteúdos e lançamentos!</p>
+    <form>
+        <input type="text" placeholder="Seu nome" required>
+        <input type="email" placeholder="Seu e-mail" required>
+        <input type="submit" value="Cadastrar">
+    </form>
+</section>
+
+<footer>
+    <p>&copy; 2025 Sintonia em Dia. Todos os direitos reservados.</p>
+</footer>
+
+</body>
+</html>
+"""
+
+# Save updated HTML
+updated_path = Path("/mnt/data/landing_page_sintonia_completa.html")
+updated_path.write_text(updated_html_content, encoding="utf-8")
+
+updated_path.name  # Return file name for download
